@@ -56,10 +56,15 @@ async function run() {
       res.send(result)
     })
 
+
+    // ----------- My Toy Car ------------
     app.get('/my-toy-car', async(req, res) =>{
       console.log(60, req.body)
 
-      let query = {}
+      // let query = {}
+      // if(req,query?.email){
+      //   query = { email: req.query.email}
+      // }
 
       const result = await toyCarCollection.find(query).toArray();
       res.send(result);
