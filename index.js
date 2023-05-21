@@ -57,8 +57,11 @@ async function run() {
     })
 
     app.get('/my-toy-car', async(req, res) =>{
-      console.log(req.body)
-      const result = await toyCarCollection.find().toArray();
+      console.log(60, req.body)
+
+      let query = {}
+
+      const result = await toyCarCollection.find(query).toArray();
       res.send(result);
     })
 
